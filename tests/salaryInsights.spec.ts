@@ -10,8 +10,9 @@ test.describe('Salary Insights Tests', () => {
 
       await insightsPage.selectRole(data.role);
       await insightsPage.selectCountry(data.country);
-
-      await expect(page).toHaveURL(/salary-insights/);
+      await insightsPage.SearchFN();
+await expect(page.getByText('Check salary insights anywhere in the world')).toBeVisible();
+     
     });
   }
 //    test.afterEach(async ({ page }) => {

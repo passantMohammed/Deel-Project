@@ -27,4 +27,9 @@ export class SalaryInsightsPage {
     await countryLocator.waitFor({ state: 'visible' });
     await countryLocator.click();
   }
+   async SearchFN() {
+   const SearchBTN = this.page.locator(`xpath=//button[contains(text(), 'Search')]`);
+    await SearchBTN.click();
+   
+  }
 }
