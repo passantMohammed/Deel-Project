@@ -1,0 +1,104 @@
+# 🎭 DEEL Project (Playwright + TypeScript)
+
+This project automates the test cases for the **Salary Insights** page on Deel's platform using [Playwright](https://playwright.dev) with TypeScript.
+
+It demonstrates how to:
+- Select roles and countries using dynamic data from JSON files
+- Interact with dropdown elements using Material UI components
+
+---
+
+
+## 📁 Folder Structure
+
+```
+DEEL_PROJECT/
+├── tests/ # Contains test specs
+│ └── salaryInsights.spec.ts
+├── data/
+│ └── roles.json # Test data for roles
+├── pages/
+│ └── SalaryInsightsPage.ts # Page Object Model abstraction
+├── utils/ # Optional utilities (if any)
+├── playwright.config.ts # Playwright configuration
+├── tsconfig.json # TypeScript configuration
+├── package.json # NPM dependencies and scripts
+
+
+## 🧰 Prerequisites & Installation
+
+### ✅ 1. Install Node.js
+
+Make sure Node.js is installed. You can download it from: https://nodejs.org/
+
+Verify installation:
+
+node -v
+npm -v
+
+
+### 1. Extract the Project
+
+Unzip the file you received:
+
+unzip DEEL PROJECT.zip
+cd DEEL PROJECT
+
+
+### 2. Install Dependencies
+
+
+npm install
+
+
+### 3. Install Playwright Browsers
+
+
+npx playwright install
+```
+
+
+## 🚀 Running the Tests
+
+### Run all tests:
+
+```bash
+npx playwright test
+```
+
+### Run with HTML report:
+
+```bash
+npx playwright test --reporter=html
+npx playwright show-report
+```
+
+---
+
+## 🧪 Dynamic Role Selection
+
+The test dynamically selects a role based on `roles.json`:
+
+```json
+{
+  "role": "Product Manager",
+  "country": "Germany"
+}
+```
+
+Update this file in `/data` to change input dynamically.
+
+---
+
+## ✅ Key Features
+
+- 📌 Page Object Model structure
+- 🎯 JSON-driven test data
+- 🧠 Smart dropdown handling with Material UI components
+- 🧪 Clean Playwright TypeScript test structure
+
+---
+
+## 📄 License
+
+This project is for internal testing, demo, and automation practice purposes only.
